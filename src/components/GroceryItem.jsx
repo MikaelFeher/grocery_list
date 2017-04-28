@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { completedItemRef, groceryItemRef } from '../firebase';
+import { collectedItemRef, groceryItemRef } from '../firebase';
 
 class GroceryItem extends Component {
 
 	completedItem() {
 		const { title, serverKey } = this.props.item;
 		groceryItemRef.child(serverKey).remove();
-		completedItemRef.push({title});
+		collectedItemRef.push({title});
 	}
 
 	render() {
