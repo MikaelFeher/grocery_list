@@ -21,4 +21,5 @@ export function setCollectedItems(collectedItems) {
 		type: SET_COLLECTED,
 		collectedItems
 	}
+	return action;
 }

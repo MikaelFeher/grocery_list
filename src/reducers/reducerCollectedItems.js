@@ -1,10 +1,10 @@
-import { SET_COMPLETED } from '../constants';
+import { SET_COLLECTED } from '../constants';
 
 export default (state = [], action) => {
 	switch (action.type) {
-		case SET_COMPLETED:
-			const { completedItems } = action;
-			return completedItems;
+		case SET_COLLECTED:
+			const { collectedItems } = action;
+			return collectedItems;
 		default:
 			return state;
 	}

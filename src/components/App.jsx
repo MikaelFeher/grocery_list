@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
 import AddGrocery from './AddGrocery';
 import GroceriesList from './GroceriesList'
+import CollectedItemsList from './CollectedItemsList';
+import { collectedItemRef } from '../firebase';
 
 class App extends Component {
 
@@ -11,6 +13,7 @@ class App extends Component {
 	}
 
 	render() {
+		console.log('collectedItemRef', collectedItemRef);
 		return(
 			<div className="col-sm-4" style={{margin: '5%'}}>
 				<h1>Grocery List</h1>
@@ -19,8 +22,7 @@ class App extends Component {
 				<hr/>
 				<GroceriesList />
 				<hr/>
-				<h4>Collected Items</h4>
-				
+				<CollectedItemsList />
 				<hr/>
 				<button
 					className="btn btn-danger"
