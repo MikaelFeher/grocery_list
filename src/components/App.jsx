@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
+import AddItem from './AddItem';
 
 class App extends Component {
 
@@ -9,8 +10,11 @@ class App extends Component {
 
 	render() {
 		return(
-			<div style={{margin: '5%'}}>
+			<div className="form col-sm-4" style={{margin: '5%'}}>
 				<h1>Grocery List</h1>
+				<hr/>
+				<AddItem />
+				<hr/>
 				<button
 					className="btn btn-danger"
 					onClick={() => this.logOut()}
