@@ -19,6 +19,9 @@ class App extends Component {
 				<hr/>
 				<GroceriesList />
 				<hr/>
+				<h4>Collected Items</h4>
+				
+				<hr/>
 				<button
 					className="btn btn-danger"
 					onClick={() => this.logOut()}

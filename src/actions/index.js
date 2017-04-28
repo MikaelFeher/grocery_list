@@ -1,4 +1,4 @@
-import { SIGNED_IN, SET_GROCERIES } from '../constants';
+import { SIGNED_IN, SET_GROCERIES, SET_COMPLETED } from '../constants';
 
 export function logUser(email) {
 	const action = {
@@ -14,4 +14,11 @@ export function setGroceries(groceries) {
 		groceries
 	}
 	return action;
+}
+
+export function setCompletedItems(completedItems) {
+	const action = {
+		type: SET_COMPLETED,
+		completedItems
+	}
 }

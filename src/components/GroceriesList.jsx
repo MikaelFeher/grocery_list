@@ -10,7 +10,8 @@ class GroceriesList extends Component {
 			let groceries = [];
 			snap.forEach(item => {
 				const { email, title } = item.val();
-				groceries.push({ email, title });
+				const serverKey = item.key;
+				groceries.push({ email, title, serverKey });
 			})
 			this.props.setGroceries(groceries);
 		})
