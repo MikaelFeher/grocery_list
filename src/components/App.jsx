@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
-import AddItem from './AddItem';
+import AddGrocery from './AddGrocery';
+import GroceriesList from './GroceriesList'
 
 class App extends Component {
 
@@ -10,10 +12,12 @@ class App extends Component {
 
 	render() {
 		return(
-			<div className="form col-sm-4" style={{margin: '5%'}}>
+			<div className="col-sm-4" style={{margin: '5%'}}>
 				<h1>Grocery List</h1>
 				<hr/>
-				<AddItem />
+				<AddGrocery />
+				<hr/>
+				<GroceriesList />
 				<hr/>
 				<button
 					className="btn btn-danger"
@@ -26,4 +30,8 @@ class App extends Component {
 	}
 }
 
-export default App;
+function mapStateToProps(state) {
+	return{}
+}
+
+export default connect(mapStateToProps, null)(App);

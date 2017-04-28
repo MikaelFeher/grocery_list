@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { groceryItemRef } from '../firebase';
 
-class AddItem extends Component {
+class AddGrocery extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -9,10 +10,11 @@ class AddItem extends Component {
 		}
 	}
 
-	addItem() {
+	addGroceries() {
 		const { title } = this.state;
-		console.log('title: ', title);
-		groceryItemRef.push(title);
+		const { email } = this.props.user;
+		groceryItemRef.push({email, title});
+		
 	}
 
 	render() {
@@ -27,7 +29,7 @@ class AddItem extends Component {
 					/>
 					<button
 						className="btn btn-success"
-						onClick={() => this.addItem()}
+						onClick={() => this.addGroceries()}
 					>
 						Add Item
 					</button>
@@ -37,4 +39,11 @@ class AddItem extends Component {
 	}
 }
 
-export default AddItem;
+function mapStateToProps(state) {
+	const { user } = state;
+	return {
+		user
+	}
+}
+
+export default connect(mapStateToProps, null)(AddGrocery);
