@@ -14,13 +14,13 @@ class AddGrocery extends Component {
 		const { title } = this.state;
 		const { email } = this.props.user;
 		groceryItemRef.push({email, title});
-		
+
 	}
 
 	render() {
 		return(
 			<div style={{margin: '5%'}}>
-				<h3>Add Items</h3>
+				<h3>Lägg Till En Vara</h3>
 				<div className="form" >
 					<input
 						className="form-control"
@@ -31,7 +31,7 @@ class AddGrocery extends Component {
 						className="btn btn-success"
 						onClick={() => this.addGroceries()}
 					>
-						Add Item
+						Lägg Till
 					</button>
 				</div>
 			</div>

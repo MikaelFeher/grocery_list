@@ -22,7 +22,7 @@ class CollectedItemsList extends Component {
 	render() {
 		return(
 			<div style={{margin: '5%', textAlign:'center'}}>
-				<h3>Collected Items</h3>
+				<h3>Plockade Varor</h3>
 				{
 					this.props.collectedItems.map((collectedItem, index) => {
 						const { email, title } = collectedItem;
@@ -38,7 +38,7 @@ class CollectedItemsList extends Component {
 					style={{marginTop:'10px'}}
 					onClick={() => this.clearCollected()}
 				>
-					Clear Collected
+					Rensa Plockade Varor
 				</button>
 			</div>
 		)

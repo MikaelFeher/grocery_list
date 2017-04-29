@@ -21,7 +21,7 @@ class GroceriesList extends Component {
 		console.log(this.props.groceries);
 		return(
 			<div style={{margin: '5%', textAlign:'center'}}>
-				<h2>Groceries</h2>
+				<h2>Varor</h2>
 				{
 					this.props.groceries.map((item, index) => {
 						return (

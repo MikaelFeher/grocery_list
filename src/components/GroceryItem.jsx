@@ -24,7 +24,7 @@ class GroceryItem extends Component {
 							className="btn btn-primary pull-right"
 							onClick={() => this.completedItem()}
 						>
-							Complete
+							Plockad
 						</button>
 
 					</div>
