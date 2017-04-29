@@ -4,7 +4,6 @@ import { firebaseApp } from '../firebase';
 import AddGrocery from './AddGrocery';
 import GroceriesList from './GroceriesList'
 import CollectedItemsList from './CollectedItemsList';
-import { collectedItemRef } from '../firebase';
 
 class App extends Component {
 
@@ -13,7 +12,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log('collectedItemRef', collectedItemRef);
 		return(
 			<div className="col-sm-4" style={{margin: '5%'}}>
 				<h1 style={{textAlign:'center'}}>Inköpslista</h1>

@@ -18,7 +18,6 @@ class GroceriesList extends Component {
 	}
 
 	render() {
-		console.log(this.props.groceries);
 		return(
 			<div style={{margin: '5%', textAlign:'center'}}>
 				<h2>Varor</h2>

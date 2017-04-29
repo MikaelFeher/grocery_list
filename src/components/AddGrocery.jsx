@@ -28,7 +28,7 @@ class AddGrocery extends Component {
 						onChange={event => this.setState({title: event.target.value})}
 					/>
 					<button
-						className="btn btn-success"
+						className="btn btn-success btn-block"
 						onClick={() => this.addGroceries()}
 					>
 						Lägg Till

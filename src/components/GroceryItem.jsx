@@ -14,22 +14,16 @@ class GroceryItem extends Component {
 		const { title } = this.props.item;
 
 		return(
-			<div style={{margin: '5px', textAlign:'left'}}>
-				<div className="row" >
-					<div className="col-xs-8">
-						<strong style={{fontSize:'26px', textTransform:'capitalize'}}>{title}</strong>
-					</div>
-					<div className="col-xs-4">
-						<button
-							className="btn btn-primary pull-right"
-							onClick={() => this.completedItem()}
-						>
-							Plockad
-						</button>
-
-					</div>
-
+			<div style={{margin: '5px', textAlign:'center'}}>
+				<div >
+					<strong
+						style={{fontSize:'26px', textTransform:'capitalize'}}
+						onClick={() => this.completedItem()}
+					>
+						{title}
+					</strong>
 				</div>
+
 			</div>
 		)
 	}

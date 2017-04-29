@@ -20,8 +20,6 @@ class LogIn extends Component {
 				console.log('error', error);
 				this.setState({error})
 			})
-		console.log('email: ', email);
-		console.log('password: ', password);
 	}
 
 	render() {

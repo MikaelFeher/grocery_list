@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { collectedItemRef } from '../firebase';
 import { setCollectedItems } from '../actions';
+import CollectedItem from './CollectedItem';
 
 class CollectedItemsList extends Component {
 	componentDidMount() {
@@ -9,7 +10,8 @@ class CollectedItemsList extends Component {
 			let collectedItems = [];
 			snap.forEach(collectedItem => {
 				const { email, title } = collectedItem.val();
-				collectedItems.push({ email, title });
+				const serverKey = collectedItem.key;
+				collectedItems.push({ email, title, serverKey });
 			})
 			this.props.setCollectedItems(collectedItems);
 		})
@@ -25,11 +27,11 @@ class CollectedItemsList extends Component {
 				<h3>Plockade Varor</h3>
 				{
 					this.props.collectedItems.map((collectedItem, index) => {
-						const { email, title } = collectedItem;
 						return (
-							<div key={index}>
-								<strong style={{textTransform:'capitalize', margin:'10px', fontSize:'20px'}}>{title}</strong>
-							</div>
+							<CollectedItem
+								key={index}
+								collectedItem={collectedItem}
+							/>
 						)
 					})
 				}
