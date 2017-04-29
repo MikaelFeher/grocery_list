@@ -21,14 +21,14 @@ class CollectedItemsList extends Component {
 
 	render() {
 		return(
-			<div style={{margin: '5%'}}>
+			<div style={{margin: '5%', textAlign:'center'}}>
 				<h3>Collected Items</h3>
 				{
 					this.props.collectedItems.map((collectedItem, index) => {
 						const { email, title } = collectedItem;
 						return (
 							<div key={index}>
-								<strong style={{textTransform:'capitalize', margin:'10px'}}>{title}</strong>
+								<strong style={{textTransform:'capitalize', margin:'10px', fontSize:'20px'}}>{title}</strong>
 							</div>
 						)
 					})

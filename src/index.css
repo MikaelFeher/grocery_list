@@ -1,3 +1,7 @@
+#root {
+	display: flex;
+	justify-content: center;
+}
 input {
 	margin: 5px 0;
 }

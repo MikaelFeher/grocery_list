@@ -16,7 +16,7 @@ class App extends Component {
 		console.log('collectedItemRef', collectedItemRef);
 		return(
 			<div className="col-sm-4" style={{margin: '5%'}}>
-				<h1>Grocery List</h1>
+				<h1 style={{textAlign:'center'}}>Grocery List</h1>
 				<hr/>
 				<AddGrocery />
 				<hr/>
@@ -25,7 +25,7 @@ class App extends Component {
 				<CollectedItemsList />
 				<hr/>
 				<button
-					className="btn btn-danger"
+					className="btn btn-danger pull-right"
 					onClick={() => this.logOut()}
 				>
 					Log Out
