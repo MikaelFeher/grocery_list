@@ -14,10 +14,10 @@ class CollectedItem extends Component {
 		const { title } = this.props.collectedItem;
 
 		return(
-			<div style={{margin: '5px', textAlign:'center'}}>
+			<div style={{margin: '5px', textAlign:'left'}}>
 				<div>
 					<strong
-						style={{textTransform:'capitalize', margin:'10px', fontSize:'20px'}}
+						style={{textTransform:'capitalize', margin:'10px', fontSize:'16px', cursor:'pointer'}}
 						onClick={() => this.unCompleteItem()}
 					>
 						{title}

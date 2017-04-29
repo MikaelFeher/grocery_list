@@ -14,10 +14,10 @@ class GroceryItem extends Component {
 		const { title } = this.props.item;
 
 		return(
-			<div style={{margin: '5px', textAlign:'center'}}>
+			<div style={{margin: '5px', textAlign:'left'}}>
 				<div >
 					<strong
-						style={{fontSize:'26px', textTransform:'capitalize'}}
+						style={{fontSize:'18px', textTransform:'capitalize', cursor:'pointer'}}
 						onClick={() => this.completedItem()}
 					>
 						{title}

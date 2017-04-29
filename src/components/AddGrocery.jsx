@@ -14,7 +14,7 @@ class AddGrocery extends Component {
 		const { title } = this.state;
 		const { email } = this.props.user;
 		groceryItemRef.push({email, title});
-
+		this.setState({title:''});
 	}
 
 	render() {
@@ -25,6 +25,7 @@ class AddGrocery extends Component {
 					<input
 						className="form-control"
 						type="text"
+						value={this.state.title}
 						onChange={event => this.setState({title: event.target.value})}
 					/>
 					<button
