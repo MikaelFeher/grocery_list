@@ -17,17 +17,17 @@ firebaseApp.auth().onAuthStateChanged(user => {
 	if (user) {
 		const { email } = user;
 		store.dispatch(logUser(email));
-		browserHistory.push('/app');
+		browserHistory.push('/grocery_list/app');
 	} else {
-		browserHistory.replace('/login');
+		browserHistory.replace('/grocery_list/login');
 	}
 })
 
 ReactDOM.render(
 	<Provider store={store}>
 		<Router path='/' history={browserHistory}>
-			<Route path='/app' component={App} />
-			<Route path='/login' component={LogIn} />
+			<Route path='/grocery_list/app' component={App} />
+			<Route path='/grocery_list/login' component={LogIn} />
 		</Router>
 	</Provider>, document.getElementById('root')
 )
