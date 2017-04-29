@@ -2,7 +2,7 @@
   "name": "grocery_list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikaelfeher.github.io/grocery_list/",
+  "homepage": "https://mikaelfeher.github.io/grocery_list",
   "dependencies": {
     "firebase": "^3.9.0",
     "react": "^15.5.4",

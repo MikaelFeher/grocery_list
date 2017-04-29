@@ -19,7 +19,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
 		store.dispatch(logUser(email));
 		browserHistory.push('/grocery_list/app');
 	} else {
-		browserHistory.replace('/grocery_list/login');
+		browserHistory.replace('/grocery_list/');
 	}
 })
 
@@ -27,7 +27,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router path='/' history={browserHistory}>
 			<Route path='/grocery_list/app' component={App} />
-			<Route path='/grocery_list/login' component={LogIn} />
+			<Route path='/grocery_list/' component={LogIn} />
 		</Router>
 	</Provider>, document.getElementById('root')
 )
